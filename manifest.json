@@ -15,6 +15,13 @@
       "type": "single",
       "firstDeployedAt": "2026-04-27T19:46:16.400Z",
       "updatedAt": "2026-04-27T19:46:16.400Z"
+    },
+    {
+      "slug": "strong-typing-and-variable-hygiene",
+      "title": "Strong Typing and Variable Hygiene",
+      "type": "single",
+      "firstDeployedAt": "2026-04-27T19:58:28.276Z",
+      "updatedAt": "2026-04-27T19:58:28.276Z"
     }
   ]
 }
