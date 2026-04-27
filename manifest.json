@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hubTitle": "My Test App",
+  "courses": [
+    {
+      "slug": "transitioning-from-javascript-to-typescript",
+      "title": "Transitioning from JavaScript to TypeScript",
+      "type": "single",
+      "firstDeployedAt": "2026-04-27T19:42:12.377Z",
+      "updatedAt": "2026-04-27T19:42:12.377Z"
+    }
+  ]
+}
