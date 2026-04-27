@@ -8,6 +8,13 @@
       "type": "single",
       "firstDeployedAt": "2026-04-27T19:42:12.377Z",
       "updatedAt": "2026-04-27T19:42:12.377Z"
+    },
+    {
+      "slug": "typescript-environment-setup-and-compilation",
+      "title": "TypeScript Environment Setup and Compilation",
+      "type": "single",
+      "firstDeployedAt": "2026-04-27T19:46:16.400Z",
+      "updatedAt": "2026-04-27T19:46:16.400Z"
     }
   ]
 }

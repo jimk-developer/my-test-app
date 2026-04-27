@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data: https:; font-src 'self';">
-  <title>Transitioning from JavaScript to TypeScript — awd</title>
+  <title>TypeScript Environment Setup and Compilation — AWD</title>
   <style>
 :root {
   --primary: #2563eb;
@@ -77,21 +77,17 @@ p code, li code { background: var(--code-bg); padding: 2px 6px; border-radius: 4
 .back-link { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-size: 0.9rem; }
 .back-link:hover { text-decoration: underline; }
 </style>
-  <style>:root{--primary:#991b1b;--primary-dark:#7f1d1d;}header{background:#7f1d1d;}</style>
+  <style>:root{--primary:#6d28d9;--primary-dark:#5b21b6;}header{background:#5b21b6;}</style>
 </head>
 <body>
 <div class="container">
   <header>
-    <div class="label">awd · Gotchas</div>
-    <h1>Transitioning from JavaScript to TypeScript</h1>
+    <div class="label">AWD · Learning Objectives</div>
+    <h1>TypeScript Environment Setup and Compilation</h1>
   </header>
   <main>
     <a class="back-link" href="index.html">← Back to Course Package</a>
-    <div class="gotcha-item"><strong>⚠️ The Compilation Illusion</strong><br>Browsers and Node.js cannot execute .ts files directly and require a build step to convert them into JavaScript. If you forget to run the compiler (tsc), your changes won't reflect in the browser even if your code looks correct.</div>
-<div class="gotcha-item"><strong>⚠️ The 'any' Trap</strong><br>Using the 'any' type effectively disables the TypeScript compiler's type-checking for that variable. This creates a false sense of security where your code may compile successfully but crash with runtime errors that TypeScript was designed to prevent.</div>
-<div class="gotcha-item"><strong>⚠️ Structural 'Shape' Enforcement</strong><br>TypeScript uses structural typing, meaning an object must exactly match the 'shape' of its interface unless properties are marked as optional with a question mark. Missing a required property or adding an undeclared one will cause a compile-time error, unlike JavaScript which would simply return 'undefined' at runtime.</div>
-<div class="gotcha-item"><strong>⚠️ Union Type Limitation</strong><br>While the pipe operator (|) allows a variable to hold multiple types, you can only safely access properties that are common to all types in that union. If you try to access a property unique to only one of the types without 'narrowing' it first, TypeScript will block the action to prevent potential crashes.</div>
-<div class="gotcha-item"><strong>⚠️ Silent Strictness</strong><br>By default, TypeScript may not catch every potential error unless 'strict' mode is manually enabled in the tsconfig.json file. Leaving this off allows for 'implicit any' and null-pointer risks, meaning you miss out on the most powerful safety features the language offers.</div>
+    <ol><li>Explain the necessity of the transpilation workflow and why running 'node' directly on a .ts file will result in an error. 2. Demonstrate how to initialize a project and install TypeScript as a local dev-dependency using NPM to avoid global versioning conflicts. 3. Implement a basic project configuration by creating and modifying a tsconfig.json file to manage compiler output and directory structure.</li></ol>
   </main>
 </div>
 </body>

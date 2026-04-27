@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data: https:; font-src 'self';">
-  <title>Transitioning from JavaScript to TypeScript — awd</title>
+  <title>TypeScript Environment Setup and Compilation — AWD</title>
   <style>
 :root {
   --primary: #2563eb;
@@ -77,17 +77,20 @@ p code, li code { background: var(--code-bg); padding: 2px 6px; border-radius: 4
 .back-link { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-size: 0.9rem; }
 .back-link:hover { text-decoration: underline; }
 </style>
-  <style>:root{--primary:#6d28d9;--primary-dark:#5b21b6;}header{background:#5b21b6;}</style>
+  <style>:root{--primary:#991b1b;--primary-dark:#7f1d1d;}header{background:#7f1d1d;}</style>
 </head>
 <body>
 <div class="container">
   <header>
-    <div class="label">awd · Learning Objectives</div>
-    <h1>Transitioning from JavaScript to TypeScript</h1>
+    <div class="label">AWD · Gotchas</div>
+    <h1>TypeScript Environment Setup and Compilation</h1>
   </header>
   <main>
     <a class="back-link" href="index.html">← Back to Course Package</a>
-    <ol><li>Explain the necessity of the compilation process and why browsers cannot execute TypeScript files directly. 2. Implement object structures using interfaces to ensure data shapes are strictly enforced during development. 3. Apply explicit type annotations to variables and function parameters while avoiding the 'any' type to maintain full type safety.</li></ol>
+    <div class="gotcha-item"><strong>⚠️ The 'node index.ts' Illusion</strong><br>Node.js cannot execute TypeScript files directly because it lacks a built-in transpiler for .ts syntax. If you attempt this, the engine will throw a SyntaxError as soon as it encounters a type annotation.</div>
+<div class="gotcha-item"><strong>⚠️ Global vs. Local TSC Conflict</strong><br>Running 'tsc' instead of 'npx tsc' often fails because the system looks for a global installation rather than the project-specific version. This leads to 'command not found' errors or, worse, compiling your code with an outdated version of TypeScript that doesn't match your project settings.</div>
+<div class="gotcha-item"><strong>⚠️ The 'Double-Step' Execution Requirement</strong><br>Beginners often forget that TypeScript is a build-step language, meaning changes in index.ts won't appear in index.js until you re-run the compiler. If you skip 'npx tsc' and run 'node index.js' immediately after a code change, you will be debugging old logic while looking at new code.</div>
+<div class="gotcha-item"><strong>⚠️ The Global Installation Trap</strong><br>Installing TypeScript with the '-g' flag creates a single version for your entire machine, which breaks projects requiring different versions. By not using '--save-dev', you lose the ability to share a consistent development environment with other collaborators via the package.json file.</div>
   </main>
 </div>
 </body>
